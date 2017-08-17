@@ -1,6 +1,8 @@
 package com.example.yaseen.mynavapp;
 
+import android.content.Intent;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -55,6 +57,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
     }
 
     @Override
@@ -103,6 +109,9 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_gallery) {
+
+            Intent getworkers=new Intent(Intent.ACTION_VIEW, Uri.parse("http://103.235.104.202:3000/workers"));
+            startActivity(getworkers);
 
         } else if (id == R.id.nav_slideshow) {
 
